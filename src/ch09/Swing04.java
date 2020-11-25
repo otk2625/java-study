@@ -33,6 +33,7 @@ public class Swing04 extends JFrame {
 		setTitle("527page");
 		setSize(400,400);
 		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);//이벤트 분배 스레드를 끄는것
 		
 		c = getContentPane(); 
 		panel.setBackground(Color.GRAY);
