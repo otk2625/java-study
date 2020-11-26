@@ -8,5 +8,5 @@ public class SirmpBurger extends Burger {
 	public SirmpBurger(int price, String desc) {
 		super(price, desc);
 	}
-
+	
 }
