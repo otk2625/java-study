@@ -22,7 +22,10 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 class imgbtn extends JButton {
-	 public imgbtn(String text) { super(text);  } 
+	public imgbtn(String text) {
+		super(text);
+	}
+
 	@Override
 	protected void paintComponent(Graphics g) {
 		Color c = new Color(255, 247, 242); // 배경색 결정
@@ -58,7 +61,7 @@ public class OpenChallenge2 extends JFrame {
 	ImageIcon img1, img2, img3, img4;
 	JLabel la, la2, la3, la4;
 
-	public OpenChallenge2() {
+	public void start() {
 		cardBox = new JPanel();
 		menupanel = new JPanel();
 		card = new CardLayout();
@@ -72,14 +75,18 @@ public class OpenChallenge2 extends JFrame {
 		la4 = new JLabel();
 		btn1 = new imgbtn("이전");
 		btn2 = new imgbtn("다음");
+	}
 
+	public void middle() {
 		setSize(631, 740);
 		setTitle("OpenChallenge");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setLayout(new BorderLayout());
 		cardBox.setLayout(card);
 		menupanel.setLayout(new FlowLayout());
+	}
 
+	public void end() {
 		la.setIcon(img1);
 		la2.setIcon(img2);
 		la3.setIcon(img3);
@@ -93,15 +100,21 @@ public class OpenChallenge2 extends JFrame {
 		menupanel.setBackground(Color.gray);
 		menupanel.setPreferredSize(new Dimension(80, 100)); // 패널 크기 조정
 		menupanel.setBorder(BorderFactory.createEmptyBorder(10, 100, 10, 100)); // 상좌하우 10씩 띄우기
-		
-		btn1.setPreferredSize(new Dimension(150, 70)); // 패널 크기 조정
-		btn2.setPreferredSize(new Dimension(150, 70)); // 패널 크기 조정
-		
+
+		btn1.setPreferredSize(new Dimension(150, 70)); // 크기 조정
+		btn2.setPreferredSize(new Dimension(150, 70)); // 크기 조정
+
 		menupanel.add(btn1);
 		menupanel.add(btn2);
 
 		add(menupanel, BorderLayout.SOUTH);
 		add(cardBox, BorderLayout.CENTER);
+	}
+
+	public OpenChallenge2() {
+		start();
+		middle();
+		end();
 
 		btn1.addActionListener(new ActionListener() {
 			@Override
@@ -122,5 +135,4 @@ public class OpenChallenge2 extends JFrame {
 	public static void main(String[] args) {
 		new OpenChallenge2();
 	}
-
 }
