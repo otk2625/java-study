@@ -30,6 +30,35 @@ YouTube영상 -
 
 ## Player
  - 사용자가 플레이하는 플레이어 JLabel클래스, 클래스 내부에는 플레이어가 움직일 수 있는 좌, 우, 점프 등의 메소드가 존재 스레드 사용이 많다보니 작은 렉이 발생한다.
+``` JAVA
+public void moveRight1() {
+      if (isRight == false) {
+         new Thread(new Runnable() {
+            @Override
+            public void run() {
+               seewhere = true;
+               isRight = true;
+               while (isRight && hp > 0) {
+                  moveRangeR();
+                  // 오른쪽으로 보는중
+                  setLocation(x, y); // 내부에 repaint() 존재
+                  try {
+                     Thread.sleep(3);
+                     setIcon(icPlayerW);
+                     Thread.sleep(3);
+                     setIcon(icPlayerR);
+
+                  } catch (InterruptedException e) {
+                     e.printStackTrace();
+                  }
+               }
+               setIcon(icPlayerW);
+
+            }
+         }).start();
+      }
+   }
+```
 
 ## MapleApp
  - 게임이 실행되는 틀 JFrame 여기에서 게임이 진행된다. 공격했을때의 충돌을 검사하는 메소드나, 다른 모든 객체를 생성하는 역할
@@ -45,14 +74,13 @@ YouTube영상 -
 
 ## Enemy클래스를 상속받는 몬스터
 
-This module depends upon a knowledge of [Markdown]().
 
 ```
 ```
 
-### Any optional sections
+## 만들어본 후기
 
-## Usage
+## 부족한점
 
 ```
 ```
@@ -69,15 +97,4 @@ Note: The `license` badge image link at the top of this file should be updated w
 
 ## Contributing
 
-See [the contributing file](CONTRIBUTING.md)!
-
-PRs accepted.
-
-Small note: If editing the Readme, please conform to the [standard-readme](https://github.com/RichardLitt/standard-readme) specification.
-
-### Any optional sections
-
-## License
-
-[MIT © Richard McRichface.](../LICENSE)
 
