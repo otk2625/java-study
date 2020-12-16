@@ -86,6 +86,7 @@ public void moveRight1() {
 ## Enemy
  - 몬스터들이 상속해야하는 JLable 추상클래스 나머지 몬스터들은 이 클래스 형식에 맞춰서 제작
  상속 받는 행위, 상태
+ 
  ''' JAVA
  
 	Enemy enemy = this;
@@ -126,16 +127,18 @@ public void moveRight1() {
 ## Skill
  - 스킬을 사용했을때 나오는 스킬 JLabel 스킬또한 하나의 객체로 인식하여 몬스터간 거리를 계산, 충돌하는 클래스
 스킬 클래스의 메소드 일부 움직임은 플레이어의 이동과 비슷
+
 ''' JAVA
- public void Col(ArrayList<Enemy> enemy) {
-      for (int i = 0; i < enemy.size(); i++) {
-         if (crash(this.x, this.y, enemy.get(i).x, enemy.get(i).y, this.width, this.height, enemy.get(i).width,
-               enemy.get(i).height)) {
-            System.out.println("스킬 적중!");
-            this.isSkill = false;
-            setIcon(null);
-            enemy.get(i).hp -= 20;
-            System.out.println(enemy.get(i).name + " hp :" + enemy.get(i).hp);
+
+	 public void Col(ArrayList<Enemy> enemy) {
+	      for (int i = 0; i < enemy.size(); i++) {
+		 if (crash(this.x, this.y, enemy.get(i).x, enemy.get(i).y, this.width, this.height, enemy.get(i).width,
+		       enemy.get(i).height)) {
+		    System.out.println("스킬 적중!");
+		    this.isSkill = false;
+		    setIcon(null);
+		    enemy.get(i).hp -= 20;
+		    System.out.println(enemy.get(i).name + " hp :" + enemy.get(i).hp);
 '''
         
 ## Enemy클래스를 상속받는 몬스터클래스
