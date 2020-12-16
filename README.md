@@ -66,6 +66,7 @@ public void moveRight1() {
  중요 코드로는 플레이어와 몬스터 간 거리를 계산하여 충돌을 검사하는 메소드가 존재
  
  ''' JAVA
+	
 	public boolean crash(int playerX, int playerY, int enemyX, int enemyY, int playerW, int playerH, int enemyW,
 			int enemyH) {
 		boolean check = false;
@@ -86,7 +87,8 @@ public void moveRight1() {
  - 몬스터들이 상속해야하는 JLable 추상클래스 나머지 몬스터들은 이 클래스 형식에 맞춰서 제작
  상속 받는 행위, 상태
  ''' JAVA
- Enemy enemy = this;
+ 
+	Enemy enemy = this;
 	ImageIcon enemyMove;
 	final static String TAG = "Enemy : ";
 	//좌표값
