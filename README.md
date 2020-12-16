@@ -64,8 +64,8 @@ public void moveRight1() {
 ## MapleApp
  - 게임이 실행되는 틀 JFrame 여기에서 게임이 진행. 공격했을때의 충돌을 검사하는 메소드나, 다른 모든 객체를 생성, HP,MP검사등을 함. 마찬가지로 Thread사용이 많아 잦은 렉이 발생
  중요 코드로는 플레이어와 몬스터 간 거리를 계산하여 충돌을 검사하는 메소드가 존재
+ 
  ''' JAVA
-// 충돌 함수
 	public boolean crash(int playerX, int playerY, int enemyX, int enemyY, int playerW, int playerH, int enemyW,
 			int enemyH) {
 		boolean check = false;
@@ -77,7 +77,6 @@ public void moveRight1() {
 		}
 		return check;
 	}
-	// end 충돌
   '''
   
 ## LoginScr
@@ -104,7 +103,8 @@ public void moveRight1() {
  '''
  
  ''' JAVA
- public Enemy() {
+ 
+	public Enemy() {
 		
 	}
 	public Enemy(String string, int x, int y) {
@@ -142,7 +142,8 @@ public void moveRight1() {
   - 현재 시간값을 사용하여 변칙적인 행동을 가능하게 함
   
   ''' JAVA
-  public void moveChange() {
+  
+ 	 public void moveChange() {
 		new Thread(new Runnable() {
 			@Override
 			public void run() {
