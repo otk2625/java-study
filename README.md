@@ -1,20 +1,24 @@
-### 1. 개요
- - JAVA문법을 공부하면서 평소 좋아하던 게임을 모티브삼아 프로젝트를 제작하게 되었습니다. 제작 기간은 3주정도 걸렸고 총 3명이 합작하여 만들었습니다
- 
- # Title
 
-![banner]()
+  # 미니메이플스토리
+ 1. JAVA언어를 공부하면서 평소 좋아하던 게임을 만들자는 생각에 메이플스토리를 모티브삼아 프로젝트를 제작하게 되었습니다. 제작 기간은 3주정도 걸렸고 총 3명이 합작하여 만들었습니다
 
-![badge]()
-![badge]()
-[![license](https://img.shields.io/github/license/:user/:repo.svg)](LICENSE)
-[![standard-readme compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+![Git-Hub주소](https://naver.com)
 
-This is an example file with maximal choices selected.
 
-This is a long description.
+만들고 싶었던 것
+![그림1]()
+![그림2]()
 
-## Table of Contents
+## 설치 및 실행
+1. 설치
+- SpringToolSuite4.exe툴을 사용하여 제작했으며, 위의 파일을 다운받아서 export하시면 되겠습니다.
+- 이클립스도 실행이 될 것 같지만 SpringToolSuite4를 사용하시는걸 권장합니다.
+2. 실행
+- LoginScr클래스를 Run해서 실행 시키면 게임을 진행 할 수 있습니다.
+
+
+
+## 목차
 
 - [Security](#security)
 - [Background](#background)
